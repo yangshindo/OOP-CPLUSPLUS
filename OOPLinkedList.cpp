@@ -20,9 +20,9 @@ public:
   void setNext(Node *next) { Next = next; }
 
   // Getters
-  int getValue() { return Value; }
+  int getValue() { return this->Value; }
 
-  Node *getNext() { return Next; }
+  Node* getNext() { return this->Next; }
 };
 
 // Classe Lista
@@ -45,10 +45,11 @@ public:
   void setSize(int size) { Size = size; }
 
   // Getters
-  Node getBeginning() { return *Beginning; }
-  Node getEnd() { return *End; }
+  Node* getBeginning() { return this->Beginning; }
+  Node* getEnd() { return this->End; }
   int getSize() { return Size; }
 };
+
 
 void insertAtTheBeginning(List *list) {
   Node *newNode = new Node(0, NULL);
