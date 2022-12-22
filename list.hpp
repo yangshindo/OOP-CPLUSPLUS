@@ -67,20 +67,20 @@ class List {
           int value = node->getValue();
           
           if (i == 0) {
-            this->beginning = currentNode->getNext();
+            this->beginning = node->getNext();
           } else {
-            previousNode->setNext(currentNode->getNext());
+            lastNode->setNext(node->getNext());
           }
-        }
           delete node;
           this->size--;
           return value;
         }
         lastNode = node;
         node = node->getNext();
-      }
+
       return -1;
     }
+      }
 
 
     //Remove valor específico
